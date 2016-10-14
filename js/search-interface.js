@@ -12,6 +12,7 @@ $(document).ready(function(){
     event.preventDefault();
     $('#name').text("");
     $('#description').text("");
+    $('#date').text("");
     var username = $('#search_input').val();
     $('#search_input').val("");
     search.getRepos(username);
