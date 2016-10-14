@@ -10,11 +10,12 @@ $(document).ready(function(){
 
   $('#search').submit(function(event) {
     event.preventDefault();
+    $('#name').text("");
+    $('#description').text("");
     var username = $('#search_input').val();
-    console.log(username);
+    $('#search_input').val("");
     search.getRepos(username);
   });
   $('#api').click(function() {
-    console.log(Api);
   });
 });
