@@ -6,6 +6,7 @@ function Search(){
 //add function to get precisely the right amount of repos
 Search.prototype.getRepos = function(username){
   $.get('https://api.github.com/users/' + username + '/repos?sort=created&per_page=300&access_token=' + apiKey).then(function(response){
+    console.log(response);
     for (var i = 0; i < response.length; i++) {
       $('#name').append(response[i].name + "<br>")
       if (response[i].description) {
@@ -15,7 +16,7 @@ Search.prototype.getRepos = function(username){
       }
     }
   }).fail(function(error){
-    console.log(error.responseJSON.message);
+    alert('that is not a valid username, please try again');
   });
 };
 
