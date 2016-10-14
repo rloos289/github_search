@@ -1,4 +1,6 @@
-var search = require('./../js/search.js').TemplateSearch;
+var Search = require('./../js/search.js').SearchModule;
+var apiKey = require('./../.env').apiKey;
+var Api = require('./../js/search.js').getRepos;
 
 
 //<!-- Back End -->
@@ -9,6 +11,7 @@ $(document).ready(function(){
     var username = $('#search_input').val();
     console.log(username);
   });
+  $('#api').click(function() {
+    console.log(Api);
+  });
 });
-
-exports.SearchModule = Search
