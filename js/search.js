@@ -33,6 +33,8 @@ Search.prototype.getInfo = function(username){
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
     console.log(response);
     $("#user_info").append(
+      "<img src='" + response.avatar_url + "' alt='user avater'>" +
+      "<p> Username: " + response.login + "</p>" +
       "<p> Name: " + response.name + "</p>" +
       "<p> Email address: " + response.email + "</p>" +
       "<p> Location: " + response.location + "</p>"
