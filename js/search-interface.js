@@ -7,7 +7,6 @@ var Api = require('./../js/search.js').getRepos;
 
 $(document).ready(function(){
   var search = new Search();
-
   $('#search').submit(function(event) {
     event.preventDefault();
     $('#name').text("");
@@ -16,7 +15,11 @@ $(document).ready(function(){
     var username = $('#search_input').val();
     $('#search_input').val("");
     search.getRepos(username);
-  });
-  $('#api').click(function() {
+    setTimeout(function() {
+      $('.project').click(function(event) {
+      event.preventDefault();
+      $('.info',this).toggle('.hide');
+      });
+    }, 100);
   });
 });
