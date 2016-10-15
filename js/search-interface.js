@@ -10,11 +10,10 @@ $(document).ready(function(){
   $('#search').submit(function(event) {
     event.preventDefault();
     $('#name').text("");
-    $('#description').text("");
-    $('#date').text("");
     var username = $('#search_input').val();
     $('#search_input').val("");
     search.getRepos(username);
+    search.getInfo(username);
     setTimeout(function() {
       $('.project').click(function(event) {
       event.preventDefault();
@@ -22,5 +21,5 @@ $(document).ready(function(){
       });
     }, 1000);
   });
-  
+
 });
