@@ -22,7 +22,7 @@ Search.prototype.getRepos = function(username){
         "<div class='project'><p>" + response[i].name + "</p><div class='info' style='display:none' id=" + response[i].name + ">" +
         "<p>Description: " + descriptions[i] + "</p>" +
         "<p>Date created: " + dates[i] + "</p>" +
-      "</div></div>");
+      "</div></div><hr>");
     }
   }).fail(function(error){
     alert('that is not a valid username, please try again');

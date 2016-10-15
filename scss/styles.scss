@@ -1,0 +1,24 @@
+$gray : #E6E6E6;
+
+body {
+  background-color: green;
+  color: $gray;
+}
+
+.project {
+  font-weight: bold;
+  color: $gray;
+  font-size: large;
+    .info{
+      font-weight: normal;
+      font-size: medium;
+    }
+}
+
+button {
+  color: black;
+}
+
+#user_info {
+  margin-top: 15%;
+}
